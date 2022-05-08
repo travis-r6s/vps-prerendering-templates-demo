@@ -7,6 +7,7 @@ import pageData from './page-graphql'
 
 // Mocking the pages datastore here
 const pathsAndPages = new Map([
+  // We want to exclude the templates route, so we set to 404
   ['/templates/Post', {
     template: '/pages/404',
     data: {}
