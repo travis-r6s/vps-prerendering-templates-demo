@@ -12,9 +12,9 @@ function onBeforeRoute(pageContext: {
   // If we have this current url in our pages datastore, associate it with the relevant template (pageId).
   const pageId = global.pathsAndPages?.get(url)
 
-  if (pageId) return {
+  return {
     pageContext: {
-      _pageId: pageId.template
+      _pageId: pageId?.template ?? null
     },
   }
 }
